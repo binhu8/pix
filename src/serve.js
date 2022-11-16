@@ -4,6 +4,7 @@ const express = require('express');
 const GNRequest = require('./apis/grencianet')
 const bodyParser = require('body-parser')
 const app = express()
+let port = process.env.PORT || 3003
 
 
 app.set('view engine', 'ejs');
@@ -43,6 +44,6 @@ app.get('/', async (req, res)=> {
 })
 
 
-app.listen(2002, ()=> {
+app.listen(port, ()=> {
     console.log('servidor online')
 })
