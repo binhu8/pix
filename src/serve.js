@@ -1,8 +1,5 @@
-if(process.env.NODE_ENV != 'production'){
-    require('dotenv').config()
-}
 
-
+require('dotenv').config()
 const express = require('express');
 const GNRequest = require('./apis/grencianet')
 const bodyParser = require('body-parser')
