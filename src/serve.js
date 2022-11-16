@@ -14,7 +14,7 @@ app.set('views', 'src/views');
 app.use(bodyParser.json())
 const reqGNAlReady =  GNRequest()
 
-app.post('/webhook', (req, res)=> {
+app.post('/webhook(/pix)?', (req, res)=> {
     console.log(req.body)
     res.send(200)
 })
