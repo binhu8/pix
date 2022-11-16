@@ -30,13 +30,14 @@ app.get('/', async (req, res)=> {
         "valor": {
           "original": "1.00"
         },
-        "chave": "binhudo8@gmail.com",
+        "chave": "c27e3b6f-6317-498d-a0bf-d6123fe7e829",
         "solicitacaoPagador": "teste pix."
       }
 
       
 
-    const cobResponse = await reqGN.post('/v2/cob', dataCob)
+     const cobResponse = await reqGN.post('/v2/cob', dataCob)
+     
     const qrCodeResponse = await reqGN(`/v2/loc/${cobResponse.data.loc.id}/qrcode`)
     
     res.render('qrcode', {qrcodeImage: qrCodeResponse.data.imagemQrcode})
