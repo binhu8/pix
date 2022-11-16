@@ -4,7 +4,7 @@ const express = require('express');
 const GNRequest = require('./apis/grencianet')
 const bodyParser = require('body-parser')
 const app = express()
-let port = process.env.PORT || 3003
+let port = process.env.PORT || 2002
 
 
 app.set('view engine', 'ejs');
